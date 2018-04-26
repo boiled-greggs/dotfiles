@@ -8,7 +8,8 @@ Plugin 'tmhedberg/SimpylFold'
 Plugin 'valloric/youcompleteme'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-vinegar'
+" Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
@@ -19,6 +20,7 @@ call vundle#end()
 
 let mapleader = ","
 set showcmd
+
 
 filetype plugin indent on
 syntax enable
@@ -90,6 +92,7 @@ autocmd FileType javascript nnoremap <leader>R :!clear&&node % > output.txt<CR>
 autocmd FileType python nnoremap <leader>R :!clear&&python % > output.txt<CR>
 autocmd FileType c nnoremap <leader>R :!clear&&gcc -Wall -Werror % &&./a.out > output.txt<CR>
 autocmd FileType tex nnoremap <leader>r :!clear&&pdflatex % && open *.pdf<CR>
+autocmd FileType matlab nnoremap <leader>r :!clear&&octave %<CR>
 
 
 set noerrorbells
