@@ -7,11 +7,12 @@ export EDITOR=/usr/local/Cellar/vim/8.0.0740/bin/vim
 
 export BLOCKSIZE=1k
 
-alias vim='/usr/local/Cellar/vim/8.0.0740/bin/vim'
+alias vim='/usr/local/Cellar/vim/8.1.0400/bin/vim'
+
+set -o vi
 
 #aliases
 alias cp='cp -iv'
-alias mv='cp -iv'
 alias mkdir='mkdir -pv'
 alias cd..='cd ../'                         # Go back 1 directory level
 alias ~='cd ~'
@@ -41,6 +42,8 @@ alias lr='ll -R'           #  Recursive ls.
 alias la='ll -A'           #  Show hidden files.
 alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
 
+alias o.='open .'
+
 alias icloud='cd ~/Library/MobileDocuments/com~apple~CloudDocs'
 alias research='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Research'
 alias ccni='ssh TSDMgrst@lp02.ccni.rpi.edu'
@@ -52,6 +55,7 @@ alias complex='cd /Users/GStew/Spring\ 2017/Complex Var'
 alias pythtb='cd /usr/local/lib/python2.7/site-packages'
 alias ds='cd ~/Dropbox/fall17/data\ structures/'
 
+# ip stuff
 alias getip='curl ipecho.net/plain ; echo'
 alias myip='ipconfig getifaddr en0'
 alias myip2='ipconfig getifaddr en1'
@@ -74,9 +78,8 @@ alias clang32='c++ -m32 -g -fno-inline -fno-omit-frame-pointer'
 PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH
 
-# Setting PATH for Python 3.6
-# The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
-export PATH
+export PATH=/Library/Frameworks/Python.framework/Versions/3.6/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Users/GStew/.vimpkg/bin:/Users/gstew/Library/Python/3.7/bin
+eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
 
-export PATH=/Library/Frameworks/Python.framework/Versions/3.6/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Users/GStew/.vimpkg/bin
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
